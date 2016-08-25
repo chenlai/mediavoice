@@ -53,6 +53,11 @@ JOW(void , NdkUtil_init)(JNIEnv* env, jobject thiz, jobject context)
     gs_set_android_objects(context);
 }
 
+JOW(void , NdkUtil_loopJNI)(JNIEnv* env, jobject thiz, jint enable)
+{
+    setLoop(enable);
+}
+
 // static const JNINativeMethod gMethods[] = {
 //     {"startJNI", "()V", (void *)startJNI},
 //     {"stopJNI", "()V", (void *)stopJNI},

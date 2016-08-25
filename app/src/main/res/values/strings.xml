@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">mediavoice</string>
+    <string name="loopback">Eneable Loop</string>
+    <string name="text">Voice on IP</string>
 </resources>

@@ -23,6 +23,14 @@ public class NdkUtil {
 
         stopJNI();
     }
+    public void loop(boolean enable){
+
+        if (enable)
+            loopJNI(1);
+        else
+            loopJNI(0);
+
+    }
 
 
     public void setJVM(Context context){
@@ -34,7 +42,8 @@ public class NdkUtil {
     native int add(int x, int y);
     native void startJNI();
     native void stopJNI();
-    native void init(Context context); 
+    native void init(Context context);
+    native void loopJNI(int enable);
 
     static {
         //     System.loadLibrary("gsmediatest-jni");
