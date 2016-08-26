@@ -2,4 +2,6 @@
     <string name="app_name">mediavoice</string>
     <string name="loopback">Eneable Loop</string>
     <string name="text">Voice on IP</string>
+    <string name="enter_text">0.0.0.0</string>
+    <string name="sendip">Please input remote ip address:</string>
 </resources>

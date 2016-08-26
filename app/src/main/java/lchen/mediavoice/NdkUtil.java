@@ -31,6 +31,12 @@ public class NdkUtil {
             loopJNI(0);
 
     }
+    public void setIP(String ipaddr){
+
+
+        setipJNI(ipaddr);
+
+    }
 
 
     public void setJVM(Context context){
@@ -44,6 +50,7 @@ public class NdkUtil {
     native void stopJNI();
     native void init(Context context);
     native void loopJNI(int enable);
+    native void setipJNI(String ipaddr);
 
     static {
         //     System.loadLibrary("gsmediatest-jni");

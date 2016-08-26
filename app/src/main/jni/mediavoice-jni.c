@@ -58,6 +58,14 @@ JOW(void , NdkUtil_loopJNI)(JNIEnv* env, jobject thiz, jint enable)
     setLoop(enable);
 }
 
+JOW(void , NdkUtil_setipJNI)(JNIEnv* env, jobject thiz, jstring ipaddr)
+{
+    const char *nativeString = (*env)->GetStringUTFChars(env, ipaddr, 0);
+
+    ALOGW("ipaddr : %s", nativeString);
+    setIP(nativeString);
+}
+
 // static const JNINativeMethod gMethods[] = {
 //     {"startJNI", "()V", (void *)startJNI},
 //     {"stopJNI", "()V", (void *)stopJNI},

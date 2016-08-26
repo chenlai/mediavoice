@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -53,6 +54,20 @@ public class MainActivity extends AppCompatActivity {
     /** Called when the user clicks the Send button */
     public void startVoice(View view) {
 
+        final EditText eText;
+
+        eText = (EditText) findViewById(R.id.edittext);
+
+        Log.d(TAGM, "Ip addr" + eText.getText().toString());
+        String str = eText.getText().toString();
+
+        Toast msg = Toast.makeText(getBaseContext(),str, Toast.LENGTH_LONG);
+        msg.show();
+        msg.show();
+
+
+
+        handle.setIP(str);
         handle.logInfo();
         handle.start();
        // startJNI();
